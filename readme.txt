@@ -2,4 +2,4 @@ in the process to create AWEP assignment 2, a hosted CMS website specifically fo
 
 project idea: website for locker booking system
 
-HELLO WORLD
+hey there dear world
