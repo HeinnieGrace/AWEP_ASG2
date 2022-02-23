@@ -57,7 +57,7 @@ main {
     text-transform: uppercase;
 }
 
-.llm {
+.greyText {
     color: #8B8B8B;
 }
 
@@ -70,6 +70,7 @@ main {
 #slogan {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 #bookTitle {
@@ -94,6 +95,32 @@ main {
     width: 55%;
 }
 
+#littleSlogan p {
+    font-size: 1.3em;
+}
+
+#arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrow div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrow div img {
+    height: 150px;
+    width: 72px;
+}
+
+#arrow div p {
+    font-size: 1.5em;
+}
+
 #slogan button {
     width: 200px;
     height: 50px;
@@ -106,17 +133,59 @@ main {
 }
 
 #locker {
-    background-color: aquamarine;
     display: flex;
-    flex-grow: 1;
+    justify-content: end;
+    padding-top: 50px;
 }
 
 #outside {
     background-color: #8B8B8B;
-    height: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    border-radius: 5px;
 }
 
 .inside {
     background-color: #CFC8AE;
-    height: 100px;
+    height: 220px;
+    width: 150px;
+    margin: 15px 15px 15px 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.inside p {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.lock img {
+    height: 50px;
+    width: 55px;
+    margin: 20px auto 0 auto;
+}
+
+.line img {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
+
+#rules {
+    display: flex;
+    flex-direction: row;
+}
+
+.allRules {
+    flex: 50%;
+}
+
+.allRules div {
+    border: 3px solid #8B8B8B;
 }

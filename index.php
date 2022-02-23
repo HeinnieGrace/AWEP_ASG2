@@ -31,7 +31,7 @@
     <head>
     <main>
         <div id="homepage">
-            <h3 class="upText llm">Library Locker Management</h3>
+            <h2 class="upText greyText">Library Locker Management</h2>
             <div id="topHome">
                 <div id="slogan">
                     <div id="bookTitle">
@@ -44,14 +44,55 @@
                 </div>
                 <div id="locker">
                     <div id="outside">
-                        <div class="inside">
-                            <div>
-                                
-                            </div>
+                        <div class="inside lock">
                             <img src="assets/unlock.png">
+                            <p>00</p>
                         </div>
-                        <div class="inside">
-                        
+                        <div class="inside lock">
+                            <img src="assets/locked.png">
+                            <p>00</p>
+                        </div>
+                        <div class="inside line">
+                            <img src="assets/lines.png">
+                        </div>
+                        <div class="inside line">
+                            <img src="assets/lines.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="arrow">
+                <div>
+                    <img src="assets/arrow.png">
+                    <p class="greyText">Terms and conditions</p>
+                </div>
+            </div>
+            <div id="stepsRules">
+                <p class="first">The Steps & Rules</p>
+                <div id="rules">
+                    <div class="allRules">
+                        <div>
+                            <p><u>One</u> student can only borrow <u>one</u> locker.</p>
+                        </div>
+                        <div>
+                            <p>Once the payment has successfully made, the receipt and a <u>random locker ID</u> that is currently available will be sent to the email given by the student.</p>
+                        </div>
+                        <div>
+                            <p><u>No vandalism</u> such as applying paint or damaging any part of the locker is allowed.</p>
+                        </div>
+                        <div>
+                            <p>Losing a locker key must be immediately reported and will result in student to lose their $20 deposit to cover the maintenance costs.</p>
+                        </div>
+                    </div>
+                    <div class="allRules">
+                        <div>
+                            <p>A <u>deposit of $20</u> is needed to borrow a locker, and it will be given back to the student upon ending this subcription.</p>
+                        </div>
+                        <div>
+                            <p>To retrieve the key to the locker, student must go to the library counter and show the receipt as evidence.</p>
+                        </div>
+                        <div>
+                            <p>There’s is <u>no time limit</u> when borrowing a locker. However, student must end their subcription before they finished their studies in Politeknik Brunei, else, they will not be given back their $20 deposits.</p>
                         </div>
                     </div>
                 </div>
