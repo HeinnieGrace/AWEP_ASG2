@@ -7,11 +7,6 @@
     <title>index</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
-    <style>
-        #main {
-            display: block;
-        }
-    </style>
 </head>
 <body>
     <head>
@@ -52,10 +47,12 @@
                     <div id="outside">
                         <div class="inside lock">
                             <img src="assets/unlock.png">
+                            <?php ?>
                             <p>00</p>
                         </div>
                         <div class="inside lock">
                             <img src="assets/locked.png">
+                            <?php ?>
                             <p>00</p>
                         </div>
                         <div class="inside line">
@@ -106,67 +103,64 @@
                     <button onclick="bookALocker()">Book a Locker</button>
                 </div>
             </div>
-           <?php
-
-            // for ($i=0; $i<100; $i++) {
-            //     echo "<p>Hello world</p> ";
-            // }
-
-           ?>
+    
         </div>
     </div>
     <div id="forForm">
-<!--         <p>hello world</p> -->
-        <div id="forForm">
         <div class="titleForm">
             <h1>Library Locker Management - Submission form</h1>
         </div>
-        <div class="stuDetail">
-            <h2 class="upText greyText">STUDENT DETAILS</h2>
-            <form action="get" require="on" name="lockerForm">
-            <table>
-                <tr>
-                    <td>Full Name</td>
-                    <td><input type="text" id="name" required></td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td><input type="email" id="email" required></td>
-                </tr>
-                <tr>
-                    <td>Student ID</td>
-                    <td><input type="text" id="stuID" maxlength="9" style='text-transform:uppercase' required></td>
-                </tr>
-                <tr>
-                    <td>IC No.</td>
-                    <td><input type="ic" id="icNum" maxlength="8" required></td>
-                </tr>
-                <tr>
-                    <td>Phone No.</td>
-                    <td><input type="phone" id="mobile" maxlength="7" pattern="[0-9]{7}" required></td>
-                </tr>
-            </table>
-        </div>
+        <form method="post" action="payment.php" require="on" name="lockerForm">
+        <div id="wholeForm">
+            <div class="stuDetail">
+                <h2 class="upText greyText">STUDENT DETAILS</h2>
+                <table class="theform">
+                    <tr>
+                        <td><label for="fname">Full Name<span class="require">*</span></label></td>
+                        <td><input class="inputForm longInput" type="text" id="fname" name="fname" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email<span class="require">*</span><label></td>
+                        <td><input class="inputForm longInput" type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="stuID">Student ID<span class="require">*</span><label></td>
+                        <td><input class="inputForm" type="text" id="stuID" name="stuID" maxlength="9" required style='text-transform:uppercase'></td>
+                    </tr>
+                    <tr>
+                        <td><label for="icNum">IC No.<span class="require">*</span></label></td>
+                        <!-- ref:[https://stackoverflow.com/a/34641129] -->
+                        <td><input class="inputForm" type="number" id="icNum" name="icNum" maxlength="8" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        type = "number"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mobile">Phone No.<span class="require">*</span></label></td>
+                        <td><input class="inputForm" type="number" id="mobile" name="mobile" maxlength="7" required pattern="[0-9]{4}-[0-9]{3}" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        type = "number"></td>
+                    </tr>
+                </table>
+            </div>
 
-        <div class="payDetail">
-            <h2 class="upText greyText">PAYMENT METHODS</h2>
-            <div class="paymentType">
-                <div class="boxPay">
-                    <input type="radio" id="online" name="method" required> &nbsp <img src="assets/card.png"> &nbsp <label for="online">Online Payment</label> 
-                    <br><br>
-                    <input type="radio" id="cash" name="method" required> &nbsp <img src="assets/cash.png"> &nbsp <label for="cash">Cash</label>
-                    <br><br>
-                    <label for="deposit">Payment amount: &nbsp $20</label>
-                    <br><br>
-                    <input type="checkbox" id="condition" required> &nbsp <label for="condition" required>All the given details are correct. I also agree with the terms and conditions applied</label>
+            <div class="payDetail">
+                <h2 class="upText greyText">PAYMENT METHODS</h2>
+                <div class="paymentType">
+                    <div class="boxPay">
+                        <input type="radio" id="online" name="method" required><img src="assets/card.png"><label for="online">Online Payment</label>
+                    </div>
+                    <div class="boxPay">
+                        <input type="radio" id="cash" name="method" required><img src="assets/cash.png"><label for="cash">Cash</label>
+                    </div>
+                    <div id="amount">
+                        <label for="deposit">Payment amount: <b>$20</b></label>
+                    </div id="agree">
+                        <input type="checkbox" id="condition" required><label for="condition" required>All the given details are correct. I also agree with the terms and conditions applied</label>
+                    </div>
+                    <div id="buttonForm">
+                        <a href="#"><button onclick="backToHome()">Cancel</button></a>
+                        <input id="submitForm" type="submit" name="submit" value="Submit">
+                    </div>
                 </div>
             </div>
-        </div>
-        <br><br>
-
-        <div id="buttonForm">
-            <a href="#"><button onclick="backToHome()">Cancel</button></a>
-            <a href="#"></a><button onclick="submitForm()">Submit</button>
         </div>
         </form>
     </div>
