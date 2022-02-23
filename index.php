@@ -18,7 +18,7 @@
                     <a href="#"><button>Home</button></a>
                 </div>
                 <div class="menuButton">
-                    <a href="#"><button>Rules</button></a>
+                    <a href="#toRules"><button>Rules</button></a>
                 </div>
                 <div class="menuButton">
                     <a href="#"><button>About Us</button></a>
@@ -64,11 +64,11 @@
             <div id="arrow">
                 <div>
                     <img src="assets/arrow.png">
-                    <p class="greyText">Terms and conditions</p>
+                    <p id="toRules" class="greyText">Terms and conditions</p>
                 </div>
             </div>
             <div id="stepsRules">
-                <p class="first">The Steps & Rules</p>
+                <p id="ruleTitle" class="first">The Steps & Rules</p>
                 <div id="rules">
                     <div class="allRules">
                         <div>
@@ -96,8 +96,10 @@
                         </div>
                     </div>
                 </div>
+                <div id="bottomButton">
+                    <button>Book a Locker</button>
+                </div>
             </div>
-
            <?php
 
             // for ($i=0; $i<100; $i++) {
@@ -106,7 +108,11 @@
 
            ?>
         </div>
-        
     </main>
+    <footer>
+        <div id="footer">
+            <p>© 2022 - AWEP21S2-GP2 - All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

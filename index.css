@@ -1,3 +1,8 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #F4F4F4;
     letter-spacing: 1px;
@@ -18,11 +23,12 @@ button {
     width: 100%;
     top: 0;
     left: 0;
-    height: 50px;
+    height: 80px;
+    font-size: 1.5em;
 }
 
 #logo {
-    padding-left: 10%;
+    padding-left: 40px;
 }
 
 #logo p {
@@ -41,6 +47,7 @@ button {
     background-color: transparent;
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
+    font-size: 1.3rem;
 }
 
 .menuButton a button:hover {
@@ -49,8 +56,7 @@ button {
 
 main {
     margin: 0;
-    padding: 55px 30px 30px 30px;
-    height: 1000px;
+    padding: 85px 30px 30px 30px;
 }
 
 .upText {
@@ -96,7 +102,7 @@ main {
 }
 
 #littleSlogan p {
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 #arrow {
@@ -129,7 +135,6 @@ main {
     border-radius: 5px;
     color: white;
     font-size: 1.2em;
-    
 }
 
 #locker {
@@ -176,16 +181,73 @@ main {
     padding-bottom: 50px;
 }
 
+#ruleTitle {
+    text-align: center;
+    line-height: 0;
+    margin-top: 100px;
+}
 
 #rules {
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
 .allRules {
     flex: 50%;
+    font-size: 1.5em;
+}
+
+.allRules:nth-child(1) {
+    margin-right: 8px;
+}
+
+.allRules:nth-child(2) {
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.allRules:nth-child(2) div {
+    flex: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .allRules div {
     border: 3px solid #8B8B8B;
+    padding: 5px 25px 5px 25px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+#bottomButton {
+    width: 100%;
+    margin: 20px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stepsRules button {
+    width: 200px;
+    height: 50px;
+    background-color: #00A651;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+}
+
+#footer {
+    height: 100px;
+    background-color: #CFC8AE;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    position: absolute;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
