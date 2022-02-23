@@ -1,0 +1,122 @@
+body {
+    background-color: #F4F4F4;
+    letter-spacing: 1px;
+    font-family: Arial;
+}
+
+button {
+    letter-spacing: 1px;
+}
+
+#menu {
+    background-color: #CFC8AE;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 50px;
+}
+
+#logo {
+    padding-left: 10%;
+}
+
+#logo p {
+    font-weight: bolder;
+}
+
+#allButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.menuButton a button {
+    border: none;
+    background-color: transparent;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+.menuButton a button:hover {
+    background-color: #DFD6B6;
+}
+
+main {
+    margin: 0;
+    padding: 55px 30px 30px 30px;
+    height: 1000px;
+}
+
+.upText {
+    text-transform: uppercase;
+}
+
+.llm {
+    color: #8B8B8B;
+}
+
+#topHome {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#slogan {
+    display: flex;
+    flex-direction: column;
+}
+
+#bookTitle {
+    line-height: 10px;
+    font-weight: bold;
+    width: 50%;
+}
+
+#bookTitle p:nth-child(3) {
+    padding-bottom: 0;
+}
+
+.first {
+    font-size: 2.5em;
+}
+
+.second {
+    font-size: 3.5em;
+}
+
+#littleSlogan {
+    width: 55%;
+}
+
+#slogan button {
+    width: 200px;
+    height: 50px;
+    background-color: #00A651;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    
+}
+
+#locker {
+    background-color: aquamarine;
+    display: flex;
+    flex-grow: 1;
+}
+
+#outside {
+    background-color: #8B8B8B;
+    height: 200px;
+}
+
+.inside {
+    background-color: #CFC8AE;
+    height: 100px;
+}
