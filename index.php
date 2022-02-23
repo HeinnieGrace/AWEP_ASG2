@@ -116,7 +116,35 @@
         </div>
     </div>
     <div id="forForm">
-        <p>hello world</p>
+<!--         <p>hello world</p> -->
+        <div class="titleForm">
+            <h1>Library Locker Management - Submission form</h1>
+        </div>
+        <div class="stuDetail">
+            <h2 class="upText greyText">STUDENT DETAILS</h2>
+            <table>
+                <tr>
+                    <td>Full Name</td>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Student ID</td>
+                    <td><input type="text" id="stuID" maxlength="9" style='text-transform:uppercase'></td>
+                </tr>
+                <tr>
+                    <td>IC No.</td>
+                    <td><input type="ic" id="icNum" maxlength="8"></td>
+                </tr>
+                <tr>
+                    <td>Phone No.</td>
+                    <td><input type="phone" id="mobile" maxlength="7" pattern="[0-9]{4}-[0-9]{3}"></td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <footer>
