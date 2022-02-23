@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 <div id="bottomButton">
-                    <a href="forForm"><button onclick="bookALocker()">Book a Locker</button></a>
+                    <button onclick="bookALocker()">Book a Locker</button>
                 </div>
             </div>
            <?php
