@@ -280,6 +280,10 @@ form {
     width: 400px;
 }
 
+.boxPay {
+    background-color: white;
+}
+
 #submitForm {
     background-color: #00A651;
     border: none;
