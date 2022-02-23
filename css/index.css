@@ -54,9 +54,10 @@ button {
     background-color: #DFD6B6;
 }
 
-main {
+#main {
     margin: 0;
     padding: 85px 30px 30px 30px;
+    display: block;
 }
 
 .upText {
@@ -250,4 +251,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#forForm {
+    margin: 0;
+    padding: 85px 30px 30px 30px;
+    display: none;
 }

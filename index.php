@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <style>
+        #main {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <head>
@@ -15,10 +21,10 @@
             </div>
             <div id="allButtons">
                 <div class="menuButton">
-                    <a href="#"><button>Home</button></a>
+                    <a href="#"><button onclick="backToHome()">Home</button></a>
                 </div>
                 <div class="menuButton">
-                    <a href="#toRules"><button>Rules</button></a>
+                    <a href="#toRules"><button onclick="backToHome()">Rules</button></a>
                 </div>
                 <div class="menuButton">
                     <a href="#"><button>About Us</button></a>
@@ -29,7 +35,7 @@
             </div>
         </div>
     <head>
-    <main>
+    <div id="main">
         <div id="homepage">
             <h2 class="upText greyText">Library Locker Management</h2>
             <div id="topHome">
@@ -40,7 +46,7 @@
                     <div id="littleSlogan">
                         <p>Why bring a lot of stuff everyday when you can keep it at school.</p>
                     </div>
-                    <button>Book a Locker</button>
+                    <button onclick="bookALocker()">Book a Locker</button>
                 </div>
                 <div id="locker">
                     <div id="outside">
@@ -97,7 +103,7 @@
                     </div>
                 </div>
                 <div id="bottomButton">
-                    <button>Book a Locker</button>
+                    <button onclick="bookALocker()">Book a Locker</button>
                 </div>
             </div>
            <?php
@@ -108,7 +114,11 @@
 
            ?>
         </div>
-    </main>
+    </div>
+    <div id="forForm">
+        <p>hello world</p>
+    </div>
+
     <footer>
         <div id="footer">
             <p>© 2022 - AWEP21S2-GP2 - All Rights Reserved.</p>
