@@ -31,7 +31,6 @@
         </div>
     <head>
     <div id="payment">
-        yo
         <?php
             if(isset($_POST['fname'])) {
                 echo "Your name is ".$_POST["fname"];

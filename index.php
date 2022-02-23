@@ -112,7 +112,7 @@
         </div>
         <form method="post" action="payment.php" require="on" name="lockerForm">
         <div id="wholeForm">
-            <div class="stuDetail">
+            <div id="stuDetail">
                 <h2 class="upText greyText">STUDENT DETAILS</h2>
                 <table class="theform">
                     <tr>
@@ -141,7 +141,7 @@
                 </table>
             </div>
 
-            <div class="payDetail">
+            <div id="payDetail">
                 <h2 class="upText greyText">PAYMENT METHODS</h2>
                 <div class="paymentType">
                     <div class="boxPay">
@@ -152,7 +152,8 @@
                     </div>
                     <div id="amount">
                         <label for="deposit">Payment amount: <b>$20</b></label>
-                    </div id="agree">
+                    </div>
+                    <div id="agree">
                         <input type="checkbox" id="condition" required><label for="condition" required>All the given details are correct. I also agree with the terms and conditions applied</label>
                     </div>
                     <div id="buttonForm">

@@ -266,6 +266,18 @@ form {
     font-size: 1.5em;
 }
 
+#wholeForm {
+    display: flex;
+}
+
+#stuDetail {
+    flex: 50%;
+}
+
+#payDetail {
+    flex: 50%;
+}
+
 .inputForm {
     width: 200px;
     height: 40px;
@@ -282,6 +294,68 @@ form {
 
 .boxPay {
     background-color: white;
+    margin-bottom: 16px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.boxPay input {
+    margin: 0 25px;
+}
+
+.boxPay input[type='radio'] {
+    transform: scale(2);
+} /*ref:[https://stackoverflow.com/a/33123102] */
+
+.boxPay img {
+    height: 40px;
+}
+
+.boxPay label {
+    width: 100%;
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#amount {
+    height: 90px;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 1.3em;
+    margin-bottom: 16px;
+}
+
+#agree {
+    margin-bottom: 16px;
+}
+
+#agree input[type='checkbox'] {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#agree label {
+    color: #8B8B8B;
+}
+
+#buttonForm a button {
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    height: 50px;
+    width: 150px;
+    font-size: 1.3rem;
+    margin-right: 10px;
 }
 
 #submitForm {
