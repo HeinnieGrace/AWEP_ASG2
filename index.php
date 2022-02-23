@@ -117,36 +117,60 @@
     </div>
     <div id="forForm">
 <!--         <p>hello world</p> -->
+        <div id="forForm">
         <div class="titleForm">
             <h1>Library Locker Management - Submission form</h1>
         </div>
         <div class="stuDetail">
             <h2 class="upText greyText">STUDENT DETAILS</h2>
+            <form action="get" require="on" name="lockerForm">
             <table>
                 <tr>
                     <td>Full Name</td>
-                    <td><input type="text" id="name"></td>
+                    <td><input type="text" id="name" required></td>
                 </tr>
                 <tr>
                     <td>Email</td>
-                    <td><input type="email" id="email"></td>
+                    <td><input type="email" id="email" required></td>
                 </tr>
                 <tr>
                     <td>Student ID</td>
-                    <td><input type="text" id="stuID" maxlength="9" style='text-transform:uppercase'></td>
+                    <td><input type="text" id="stuID" maxlength="9" style='text-transform:uppercase' required></td>
                 </tr>
                 <tr>
                     <td>IC No.</td>
-                    <td><input type="ic" id="icNum" maxlength="8"></td>
+                    <td><input type="ic" id="icNum" maxlength="8" required></td>
                 </tr>
                 <tr>
                     <td>Phone No.</td>
-                    <td><input type="phone" id="mobile" maxlength="7" pattern="[0-9]{4}-[0-9]{3}"></td>
+                    <td><input type="phone" id="mobile" maxlength="7" pattern="[0-9]{7}" required></td>
                 </tr>
             </table>
         </div>
-    </div>
 
+        <div class="payDetail">
+            <h2 class="upText greyText">PAYMENT METHODS</h2>
+            <div class="paymentType">
+                <div class="boxPay">
+                    <input type="radio" id="online" name="method" required> &nbsp <img src="assets/card.png"> &nbsp <label for="online">Online Payment</label> 
+                    <br><br>
+                    <input type="radio" id="cash" name="method" required> &nbsp <img src="assets/cash.png"> &nbsp <label for="cash">Cash</label>
+                    <br><br>
+                    <label for="deposit">Payment amount: &nbsp $20</label>
+                    <br><br>
+                    <input type="checkbox" id="condition" required> &nbsp <label for="condition" required>All the given details are correct. I also agree with the terms and conditions applied</label>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <div id="buttonForm">
+            <a href="#"><button onclick="backToHome()">Cancel</button></a>
+            <a href="#"></a><button onclick="submitForm()">Submit</button>
+        </div>
+        </form>
+    </div>
+        
     <footer>
         <div id="footer">
             <p>© 2022 - AWEP21S2-GP2 - All Rights Reserved.</p>
