@@ -31,13 +31,33 @@
         </div>
     <head>
     <div id="payment">
-        <?php
-            if(isset($_POST['fname'])) {
-                echo "Your name is ".$_POST["fname"];
-            } else {
-                echo "null";
-            }
-        ?>
+        <div class="titleForm">
+            <h1>Library Locker Management - Online Payment</h1>
+        </div>
+        <div id="wholePayment">
+            <div id="firstPay">
+                <div class="fPay">
+                    <h2 class="upText greyText">STUDENT DETAILS</h2>
+                    <?php 
+                        if(isset($_POST['fname']) && isset($_POST['email'])) {
+                            $fullname = "Full Name: ".$_POST['fname'];
+                            $theEmail = "Email: ".$_POST['email'];
+                        } else {
+                            echo "null";
+                        }
+                        echo "<p>".$fullname."</p>";
+                        echo "<p>".$theEmail."</p>"; 
+                    ?>
+                </div>
+                <div class="fPay">
+                    <h2 class="upText greyText">Card information</h2>
+
+                </div>
+            </div>
+            <div id="secPay">
+
+            </div>
+        </div>
     </div>
     
     <footer>
