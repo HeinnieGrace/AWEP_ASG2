@@ -7,6 +7,11 @@
     <title>index</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
+    <!-- <style>
+        iframe {
+            display: none;
+        }
+    </style> -->
 </head>
 <body>
     <head>
@@ -129,11 +134,11 @@
                     </tr>
                     <tr>
                         <td><label for="icNum">IC No.<span class="require">*</span></label></td>
-                        <td><input class="inputForm" type="tel" inputmode="numeric" id="icNum" name="icNum" maxlength="8" required></td>
+                        <td><input class="inputForm" type="tel" inputmode="numeric" id="icNum" name="icNum" maxlength="8" minlength="8" required></td>
                     </tr>
                     <tr>
                         <td><label for="mobile">Phone No.<span class="require">*</span></label></td>
-                        <td><input class="inputForm" type="tel" inputmode="numeric" id="mobile" name="mobile" maxlength="7" required></td>
+                        <td><input class="inputForm" type="tel" inputmode="numeric" id="mobile" name="mobile" maxlength="7" minlength="7" required></td>
                     </tr>
                 </table>
             </div>
@@ -142,10 +147,10 @@
                 <h2 class="upText greyText">PAYMENT METHODS</h2>
                 <div class="paymentType">
                     <div class="boxPay">
-                        <input type="radio" id="online" name="method" required><img src="assets/card.png"><label for="online">Online Payment</label>
+                        <input type="radio" id="online" name="method" value="online" required><img src="assets/card.png"><label for="online">Online Payment</label>
                     </div>
                     <div class="boxPay">
-                        <input type="radio" id="cash" name="method" required><img src="assets/cash.png"><label for="cash">Cash</label>
+                        <input type="radio" id="cash" name="method" value="cash" required><img src="assets/cash.png"><label for="cash">Cash</label>
                     </div>
                     <div id="amount">
                         <label>Payment amount: <b>$20</b></label>
@@ -162,7 +167,7 @@
         </div>
         </form>
     </div>
-        
+    <!-- <iframe name="frame"></iframe> -->
     <footer>
         <div id="footer">
             <p>© 2022 - AWEP21S2-GP2 - All Rights Reserved.</p>

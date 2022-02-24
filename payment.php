@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Payment</title>
     <link rel="stylesheet" href="css/index.css">
-    <!-- <script src="js/index.js"></script> -->
+    <script src="js/index.js"></script>
     <style>
         iframe {
             display: none;
@@ -35,7 +35,68 @@
             </div>
         </div>
     <head>
+    Library Locker Management
+Receipt ID: random
+Locker ID: random
+Location: Library
+Payment method: $payMethod
+$cash (Please show this receipt and pay the $20 deposit to the librarian before retrieving your locker key.)
+$online (Please show this recipe to the librarian before retrieving your locker key.)
+Thank you for using our service.
     <div id="payment">
+        <?php 
+            if(isset($_POST['submit'])) {
+
+                if(isset($_POST['fname']) && isset($_POST['email']) && isset($_POST['stuID']) ) {
+                    $fullname = $_POST['fname'];
+                    $theEmail = $_POST['email'];
+                    $studentID = $_POST['stuID'];
+                } else {
+                    $fullname = "null";
+                    $theEmail = "null";
+                    $studentID = "null";
+                }
+
+
+
+
+                $to = "somebody@example.com";
+                $subject = "My subject";
+                $txt = "Hello world!";
+                $headers = "From: webmaster@example.com" . "\r\n" .
+                "CC: somebodyelse@example.com";
+
+                mail($to,$subject,$txt,$headers);
+
+                // the message
+                $msg = "First line of text\nSecond line of text";
+
+                // use wordwrap() if lines are longer than 70 characters
+                $msg = wordwrap($msg,70);
+
+                // send email
+                mail("someone@example.com","My subject",$msg);
+                //ref:[https://www.w3schools.com/php/func_mail_mail.asp]
+
+
+
+                if(isset($_POST['method'])) {
+
+                    $payMethod = $_POST['method'];
+
+                    if($payMethod=="cash") {
+
+                        echo '<script type="text/javascript">'; 
+                        echo 'alert("You have successfully book a locker!\nPlease asked the librarian to retrieve your locker key.");';
+                        echo 'window.location.href = "index.php";';
+                        echo '</script>';
+                        //ref:[https://stackoverflow.com/a/55648833]
+
+                    }
+                }
+            }
+        ?>
+
         <div class="titleForm">
             <h1>Library Locker Management - Online Payment</h1>
         </div>
@@ -44,15 +105,6 @@
             <div id="firstPay">
                 <div class="fPay">
                     <h2 class="upText greyText">STUDENT DETAILS</h2>
-                    <?php 
-                        if(isset($_POST['fname']) && isset($_POST['email'])) {
-                            $fullname = $_POST['fname'];
-                            $theEmail = $_POST['email'];
-                        } else {
-                            $fullname = "null";
-                            $theEmail = "null";
-                        }
-                    ?>
                     <p class="userDetails">Full Name: <b><?php echo $fullname; ?></b></p>
                     <p class="userDetails">Email: <b><?php echo $theEmail; ?></b></p>
                 </div>
