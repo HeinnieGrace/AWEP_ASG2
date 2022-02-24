@@ -125,7 +125,7 @@
                     </tr>
                     <tr>
                         <td><label for="stuID">Student ID<span class="require">*</span><label></td>
-                        <td><input class="inputForm" type="text" id="stuID" name="stuID" maxlength="9" required style='text-transform:uppercase'></td>
+                        <td><input class="inputForm" type="text" id="stuID" name="stuID" maxlength="9" pattern="[0-9]{2}[A-Z]{3}[0-9]{4}" required style='text-transform:uppercase'></td>
                     </tr>
                     <tr>
                         <td><label for="icNum">IC No.<span class="require">*</span></label></td>
@@ -133,7 +133,7 @@
                     </tr>
                     <tr>
                         <td><label for="mobile">Phone No.<span class="require">*</span></label></td>
-                        <td><input class="inputForm" type="tel" inputmode="numeric" id="mobile" name="mobile" maxlength="7" required pattern="[0-9]{4}-[0-9]{3}"></td>
+                        <td><input class="inputForm" type="tel" inputmode="numeric" id="mobile" name="mobile" maxlength="7" required></td>
                     </tr>
                 </table>
             </div>
@@ -148,7 +148,7 @@
                         <input type="radio" id="cash" name="method" required><img src="assets/cash.png"><label for="cash">Cash</label>
                     </div>
                     <div id="amount">
-                        <label for="deposit">Payment amount: <b>$20</b></label>
+                        <label>Payment amount: <b>$20</b></label>
                     </div>
                     <div id="agree">
                         <input type="checkbox" id="condition" required><label for="condition" required>All the given details are correct. I also agree with the terms and conditions applied</label>
