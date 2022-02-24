@@ -15,3 +15,7 @@ function backToHome() {
     document.getElementById("forForm").style.display = "none";
     console.log("Home");
 }
+
+if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+}

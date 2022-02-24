@@ -333,6 +333,10 @@ form {
     margin-bottom: 16px;
 }
 
+.paymentType {
+    padding-right: 60px;
+}
+
 #agree {
     margin-bottom: 16px;
 }
@@ -378,6 +382,59 @@ form {
     height: 100%;
 }
 
+#wholePayment form {
+    display: flex;
+}
+
+#firstPay {
+    flex: 50%;
+}
+
+#secPay {
+    flex: 50%;
+}
+
+#secPay div {
+    padding-right: 60px;
+}
+
 .require {
     color: red;
+}
+
+.fPay {
+    margin-bottom: 60px;
+}
+
+.fPay input {
+    margin-left: 0;
+}
+
+.shortInput {
+    width: 100px !important;
+}
+
+.userDetails {
+    font-size: 1.1em;
+}
+
+#lastPay {
+    background-color: white;
+    border-radius: 5px;
+    height: 100px;
+    padding-left: 20px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+#cancelButton {
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    height: 50px;
+    width: 150px;
+    font-size: 1.3rem;
+    margin-right: 10px;
 }
