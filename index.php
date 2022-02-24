@@ -129,14 +129,11 @@
                     </tr>
                     <tr>
                         <td><label for="icNum">IC No.<span class="require">*</span></label></td>
-                        <!-- ref:[https://stackoverflow.com/a/34641129] -->
-                        <td><input class="inputForm" type="number" id="icNum" name="icNum" maxlength="8" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-        type = "number"></td>
+                        <td><input class="inputForm" type="tel" inputmode="numeric" id="icNum" name="icNum" maxlength="8" required></td>
                     </tr>
                     <tr>
                         <td><label for="mobile">Phone No.<span class="require">*</span></label></td>
-                        <td><input class="inputForm" type="number" id="mobile" name="mobile" maxlength="7" required pattern="[0-9]{4}-[0-9]{3}" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-        type = "number"></td>
+                        <td><input class="inputForm" type="tel" inputmode="numeric" id="mobile" name="mobile" maxlength="7" required pattern="[0-9]{4}-[0-9]{3}"></td>
                     </tr>
                 </table>
             </div>
