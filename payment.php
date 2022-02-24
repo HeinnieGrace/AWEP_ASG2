@@ -132,6 +132,13 @@ Thank you for using our service.
                     <div id="buttonForm">
                         <a href="index.php"><input id="cancelButton" type="button" value="Cancel"></a>
                         <input id="submitForm" type="submit" name="submit" value="Pay Now">
+                        
+                        <?php
+                            if(isset($_POST['submit'])) {
+                                echo "<script>alert('You have successfully book a locker!');</script>";
+                                header("index.php");
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
