@@ -7,11 +7,6 @@
     <title>Online Payment</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
-    <style>
-        iframe {
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <head>
@@ -35,19 +30,11 @@
             </div>
         </div>
     <head>
-    Library Locker Management
-Receipt ID: random
-Locker ID: random
-Location: Library
-Payment method: $payMethod
-$cash (Please show this receipt and pay the $20 deposit to the librarian before retrieving your locker key.)
-$online (Please show this recipe to the librarian before retrieving your locker key.)
-Thank you for using our service.
     <div id="payment">
         <?php 
             if(isset($_POST['submit'])) {
 
-                if(isset($_POST['fname']) && isset($_POST['email']) && isset($_POST['stuID']) ) {
+                if( isset($_POST['fname']) && isset($_POST['email']) && isset($_POST['stuID']) ) {
                     $fullname = $_POST['fname'];
                     $theEmail = $_POST['email'];
                     $studentID = $_POST['stuID'];
@@ -57,42 +44,55 @@ Thank you for using our service.
                     $studentID = "null";
                 }
 
+                //one random letter
+                //ref:[https://stackoverflow.com/a/31441519]
+                $ranL = chr(rand(65,90));
+                
+                //random number for receipt
+                $ranN = rand(10000, 99999);
 
-
-
-                $to = "somebody@example.com";
-                $subject = "My subject";
-                $txt = "Hello world!";
-                $headers = "From: webmaster@example.com" . "\r\n" .
-                "CC: somebodyelse@example.com";
-
-                mail($to,$subject,$txt,$headers);
-
-                // the message
-                $msg = "First line of text\nSecond line of text";
-
-                // use wordwrap() if lines are longer than 70 characters
-                $msg = wordwrap($msg,70);
-
-                // send email
-                mail("someone@example.com","My subject",$msg);
+                //for receipt email
+                $subject = "Library Locker Management";
+                $receiptID = $ranL.$ranL.$ranL.$ranN;
+                $lockerID = rand(1, 30); //total no. of locker is 50
+                $location = "Library";
+                //---payment method here---
+                $cashMsg = "Please show this receipt and pay the $20 deposit to the librarian before retrieving your locker key.";
+                $onlineMsg = "Please show this recipe to the librarian before retrieving your locker key.";
+                $thanks = "Thank you for using our service.";
                 //ref:[https://www.w3schools.com/php/func_mail_mail.asp]
-
-
 
                 if(isset($_POST['method'])) {
 
                     $payMethod = $_POST['method'];
 
-                    if($payMethod=="cash") {
+                    if($payMethod=="Cash") {
+                        
+                        //all message for cash
+                        $forCashReceipt = $receiptID."\n".$lockerID."\n".$location."\n".$payMethod."\n".$cashMsg."\n".$thanks;
+                        $forCashReceipt = wordwrap($forCashReceipt,70); //warp the words when more than 70 chars
+
+                        //send email
+                        mail($theEmail,$subject,$forCashReceipt);
 
                         echo '<script type="text/javascript">'; 
-                        echo 'alert("You have successfully book a locker!\nPlease asked the librarian to retrieve your locker key.");';
+                        echo 'alert("You have successfully book a locker!\nAn email containing your receipt and locker ID has been sent to your inbox. Please show that receipt and pay the cash deposit to the librarian in order to retrieve your locker key.");';
                         echo 'window.location.href = "index.php";';
                         echo '</script>';
                         //ref:[https://stackoverflow.com/a/55648833]
-
                     }
+                }
+
+                function doneOnlinePay() {
+                    //all message for online
+                    $forOnlineReceipt = $receiptID."\n".$lockerID."\n".$location."\n".$payMethod."\n".$onlineMsg."\n".$thanks;
+                    $forOnlineReceipt = wordwrap($forOnlineReceipt,70);
+                    mail($theEmail,$subject,$forCashReceipt);
+    
+                    echo '<script type="text/javascript">'; 
+                    echo 'alert("You have successfully book a locker!\nAn email containing your receipt and locker ID has been sent to your inbox. Please show that receipt to the librarian in order to retrieve your locker key.");';
+                    echo 'window.location.href = "index.php";';
+                    echo '</script>';
                 }
             }
         ?>
@@ -101,7 +101,7 @@ Thank you for using our service.
             <h1>Library Locker Management - Online Payment</h1>
         </div>
         <div id="wholePayment">
-        <form method="post" action="" required="on" target="frame">
+        <form method="post" required="on">
             <div id="firstPay">
                 <div class="fPay">
                     <h2 class="upText greyText">STUDENT DETAILS</h2>
@@ -131,16 +131,13 @@ Thank you for using our service.
                     </div>
                     <div id="buttonForm">
                         <a href="index.php"><input id="cancelButton" type="button" value="Cancel"></a>
-                        <input id="submitForm" type="submit" name="submit" value="Pay Now">
+                        <input id="submitForm" type="submit" name="submit" value="Pay Now" onclick="doneOnlinePay()">
                     </div>
                 </div>
             </div>
         </form>
-        
         </div>
-        <iframe name="frame"></iframe><!-- ref:[https://stackoverflow.com/a/10382461] -->
     </div>
-    
     <footer>
         <div id="footer">
             <p>© 2022 - AWEP21S2-GP2 - All Rights Reserved.</p>
