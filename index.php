@@ -47,13 +47,23 @@
                     <div id="outside">
                         <div class="inside lock">
                             <img src="assets/unlock.png">
-                            <?php ?>
-                            <p>00</p>
+                            <?php
+                                $_POST['submitForm'] = 50;
+                                if(isset($_POST['submitForm'])) {
+                                    $_POST['submitForm']--;
+                                }
+                                echo "<p> " . $_POST['submitForm'];
+                            ?>
                         </div>
                         <div class="inside lock">
                             <img src="assets/locked.png">
-                            <?php ?>
-                            <p>00</p>
+                            <?php
+                                if(!isset($_POST['submitForm'])) {
+                                    $_POST['submitForm']++;
+
+                                    echo "<p> " . $_POST['submitForm'];
+                                }
+                            ?>
                         </div>
                         <div class="inside line">
                             <img src="assets/lines.png">
