@@ -125,7 +125,7 @@
                     </tr>
                     <tr>
                         <td><label for="stuID">Student ID<span class="require">*</span><label></td>
-                        <td><input class="inputForm" type="text" id="stuID" name="stuID" maxlength="9" pattern="[0-9]{2}[A-Z]{3}[0-9]{4}" required style='text-transform:uppercase'></td>
+                        <td><input class="inputForm" type="text" id="stuID" name="stuID" maxlength="9" pattern="[0-9]{2}[A-Za-z]{3}[0-9]{4}" required style='text-transform:uppercase'></td>
                     </tr>
                     <tr>
                         <td><label for="icNum">IC No.<span class="require">*</span></label></td>
