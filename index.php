@@ -49,23 +49,21 @@
                             <img src="assets/unlock.png">
                             <?php
                                 $_POST['submitForm'] = 50;
-                                if(!isset($_POST['submitForm'])) {
-                                    $_POST['submitForm']++;
+                                if(isset($_POST['submitForm'])) {
+                                    $_POST['submitForm']--;
                                 }
                                 echo "<p> " . $_POST['submitForm'];
                             ?>
-                            <p>00</p>
                         </div>
                         <div class="inside lock">
                             <img src="assets/locked.png">
                             <?php
-                                if(isset($_POST['submitForm'])) {
-                                    $_POST['submitForm']--;
+                                if(!isset($_POST['submitForm'])) {
+                                    $_POST['submitForm']++;
 
                                     echo "<p> " . $_POST['submitForm'];
                                 }
                             ?>
-                            <p>00</p>
                         </div>
                         <div class="inside line">
                             <img src="assets/lines.png">
