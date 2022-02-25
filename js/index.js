@@ -15,3 +15,17 @@ function backToHome() {
     document.getElementById("forForm").style.display = "none";
     console.log("Home");
 }
+
+//when payment method is online
+function blockPayment() {
+    document.getElementById("theReceipt").style.display = "none";
+    document.getElementById("wholePayment").style.display = "block";
+    console.log("Online");  
+}
+
+//when payment method is cash OR go to receipt after paying
+function blockCash() {
+    document.getElementById("theReceipt").style.display = "block";
+    document.getElementById("wholePayment").style.display = "none";
+    console.log("Cash/Receipt");  
+}

@@ -161,19 +161,6 @@
         </div>
         </form>
     </div>
-    <?php
-        if(isset($_POST['submitPay'])) {
-            //all message for online
-            $forOnlineReceipt = $receiptID."\n".$lockerID."\n".$location."\n".$payMethod."\n".$onlineMsg."\n".$thanks;
-            $forOnlineReceipt = wordwrap($forOnlineReceipt,70);
-            mail($theEmail,$subject,$forCashReceipt);
-
-            echo '<script type="text/javascript">'; 
-            echo 'alert("You have successfully book a locker!\nAn email containing your receipt and locker ID has been sent to your inbox. Please show that receipt to the librarian in order to retrieve your locker key.");';
-            // echo 'window.location.href = "index.php";';
-            echo '</script>';
-        }
-    ?>
     <footer>
         <div id="footer">
             <p>© 2022 - AWEP21S2-GP2 - All Rights Reserved.</p>
