@@ -50,9 +50,9 @@
                             <?php
                                 $_POST['submitForm'] = 50;
                                 if(!isset($_POST['submitForm'])) {
-                                    $_POST['submitForm']--;
+                                    $_POST['submitForm']++;
                                 }
-                                echo "<p> " . $_POST['submitForm'] = 0;
+                                echo "<p> " . $_POST['submitForm'];
                             ?>
                             <p>00</p>
                         </div>
@@ -60,7 +60,7 @@
                             <img src="assets/locked.png">
                             <?php
                                 if(isset($_POST['submitForm'])) {
-                                    $_POST['submitForm']++;
+                                    $_POST['submitForm']--;
 
                                     echo "<p> " . $_POST['submitForm'];
                                 }
