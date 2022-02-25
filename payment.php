@@ -82,18 +82,6 @@
                         //ref:[https://stackoverflow.com/a/55648833]
                     }
                 }
-
-                function doneOnlinePay() {
-                    //all message for online
-                    $forOnlineReceipt = $receiptID."\n".$lockerID."\n".$location."\n".$payMethod."\n".$onlineMsg."\n".$thanks;
-                    $forOnlineReceipt = wordwrap($forOnlineReceipt,70);
-                    mail($theEmail,$subject,$forCashReceipt);
-
-                    echo '<script type="text/javascript">'; 
-                    echo 'alert("You have successfully book a locker!\nAn email containing your receipt and locker ID has been sent to your inbox. Please show that receipt to the librarian in order to retrieve your locker key.");';
-                    echo 'window.location.href = "index.php";';
-                    echo '</script>';
-                }
             }
         ?>
 
@@ -101,7 +89,7 @@
             <h1>Library Locker Management - Online Payment</h1>
         </div>
         <div id="wholePayment">
-        <form method="post" action="payment.php" required="on">
+        <form method="post" action="index.php" required="on">
             <div id="firstPay">
                 <div class="fPay">
                     <h2 class="upText greyText">STUDENT DETAILS</h2>
@@ -131,14 +119,14 @@
                     </div>
                     <div id="buttonForm">
                         <a href="index.php"><input id="cancelButton" type="button" value="Cancel"></a>
-                        <input id="submitForm" type="submit" name="submit" value="Pay Now" onclick="doneOnlinePay()">
+                        <input id="submitForm" type="submit" name="submitPay" value="Pay Now"">
                     </div>
                 </div>
             </div>
         </form>
         
         </div>
-        <iframe name="frame"></iframe><!-- ref:[https://stackoverflow.com/a/10382461] -->
+        <!-- <iframe name="frame"></iframe>ref:[https://stackoverflow.com/a/10382461] -->
     </div>
     
     <footer>

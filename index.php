@@ -22,10 +22,10 @@
                     <a href="#toRules"><button onclick="backToHome()">Rules</button></a>
                 </div>
                 <div class="menuButton">
-                    <a href="#"><button>About Us</button></a>
+                    <a href="aboutus.php"><button>About Us</button></a>
                 </div>
                 <div class="menuButton">
-                    <a href="#"><button>Contact Us</button></a>
+                    <a href="contactus.php"><button>Contact Us</button></a>
                 </div>
             </div>
         </div>
@@ -125,7 +125,7 @@
                     </tr>
                     <tr>
                         <td><label for="stuID">Student ID<span class="require">*</span><label></td>
-                        <td><input class="inputForm" type="text" id="stuID" name="stuID" maxlength="9" pattern="[0-9]{2}[A-Z]{3}[0-9]{4}" required style='text-transform:uppercase'></td>
+                        <td><input class="inputForm" type="text" id="stuID" name="stuID" maxlength="9" pattern="[0-9]{2}[A-Za-z]{3}[0-9]{4}" required style='text-transform:uppercase'></td>
                     </tr>
                     <tr>
                         <td><label for="icNum">IC No.<span class="require">*</span></label></td>
@@ -138,7 +138,7 @@
                 </table>
             </div>
 
-            <div id="payDetail">
+            <!-- <div id="payDetail">
                 <h2 class="upText greyText">PAYMENT METHODS</h2>
                 <div class="paymentType">
                     <div class="boxPay">
@@ -158,10 +158,23 @@
                         <input id="submitForm" type="submit" name="submit" value="Submit">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         </form>
     </div>
+    <?php include 'payment.php';
+        if(isset($_POST['submitPay'])) {
+            //all message for online
+            $forOnlineReceipt = $receiptID."\n".$lockerID."\n".$location."\n".$payMethod."\n".$onlineMsg."\n".$thanks;
+            $forOnlineReceipt = wordwrap($forOnlineReceipt,70);
+            mail($theEmail,$subject,$forCashReceipt);
+
+            echo '<script type="text/javascript">'; 
+            echo 'alert("You have successfully book a locker!\nAn email containing your receipt and locker ID has been sent to your inbox. Please show that receipt to the librarian in order to retrieve your locker key.");';
+            // echo 'window.location.href = "index.php";';
+            echo '</script>';
+        }
+    ?>
     <footer>
         <div id="footer">
             <p>© 2022 - AWEP21S2-GP2 - All Rights Reserved.</p>
