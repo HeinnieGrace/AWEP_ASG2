@@ -16,19 +16,14 @@ function backToHome() {
     console.log("Home");
 }
 
-//when payment method is online
-// function blockPayment() {
-//     document.getElementById("theReceipt").style.display = "none";
-//     document.getElementById("wholePayment").style.display = "block";
-//     console.log("Online");  
-// }
-
 //when payment method is cash OR go to receipt after paying
-// function blockCash() {
-//     document.getElementById("theReceipt").style.display = "block";
-//     document.getElementById("wholePayment").style.display = "none";
-//     console.log("Cash/Receipt");  
-// }
+function blockCashJS() {
+    alert("You have successfully book a locker!\nThe next page is your receipt. Please download the receipt and bring it together with your $10 deposit to retrieve your locker key. ");
+    document.getElementById("theReceipt").style.display = "block";
+    document.getElementById("wholePayment").style.display = "none";
+    console.log("Cash/Receipt");  
+}
+
 
 //clear the contact us fields
 function clearFields() {
@@ -38,7 +33,7 @@ function clearFields() {
     document.getElementById("description").value=""
 }
 //validate contact us
-var submitForm = document.getElementById("submitForm");
+var submitForm = document.getElementById("submitform");
 	
 	submitForm.addEventListener("click", function(){
 

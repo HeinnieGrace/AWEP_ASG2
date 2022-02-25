@@ -55,7 +55,7 @@
     </table>
     <div id="buttonForm">
         <input id="cancelButton" type="button" onclick="clearFields()" value="Clear">
-        <input id="submitForm" type="button" onclick="submit()" value="Submit"><span class='msg' id='submit-error'></span>
+        <input id="submitform" type="button" onclick="submit()" value="Submit"><span class='msg' id='submit-error'></span>
     </div>
     <div id="output"></div>
     </form>
