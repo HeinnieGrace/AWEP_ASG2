@@ -1,0 +1,447 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #F4F4F4;
+    letter-spacing: 1px;
+    font-family: Arial;
+    height: 100%;
+}
+
+button {
+    letter-spacing: 1px;
+}
+
+#menu {
+    background-color: #CFC8AE;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 80px;
+    font-size: 1.5em;
+}
+
+#logo {
+    padding-left: 40px;
+}
+
+#logo p {
+    font-weight: bolder;
+}
+
+#allButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.menuButton a button {
+    border: none;
+    background-color: transparent;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+.menuButton a button:hover {
+    background-color: #DFD6B6;
+}
+
+#main {
+    margin: 0;
+    padding: 85px 30px 30px 30px;
+    display: block;
+}
+
+.upText {
+    text-transform: uppercase;
+}
+
+.greyText {
+    color: #8B8B8B;
+}
+
+#topHome {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#slogan {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#bookTitle {
+    line-height: 10px;
+    font-weight: bold;
+    width: 50%;
+}
+
+#bookTitle p:nth-child(3) {
+    padding-bottom: 0;
+}
+
+.first {
+    font-size: 2.5em;
+}
+
+.second {
+    font-size: 3.5em;
+}
+
+#littleSlogan {
+    width: 55%;
+}
+
+#littleSlogan p {
+    font-size: 1.5em;
+}
+
+#arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrow div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrow div img {
+    height: 150px;
+    width: 72px;
+}
+
+#arrow div p {
+    font-size: 1.5em;
+}
+
+#slogan button {
+    width: 200px;
+    height: 50px;
+    background-color: #00A651;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+}
+
+#locker {
+    display: flex;
+    justify-content: end;
+    padding-top: 50px;
+}
+
+#outside {
+    background-color: #8B8B8B;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    border-radius: 5px;
+}
+
+.inside {
+    background-color: #CFC8AE;
+    height: 220px;
+    width: 150px;
+    margin: 15px 15px 15px 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.inside p {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.lock img {
+    height: 50px;
+    width: 55px;
+    margin: 20px auto 0 auto;
+}
+
+.line img {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
+#ruleTitle {
+    text-align: center;
+    line-height: 0;
+    margin-top: 100px;
+}
+
+#rules {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.allRules {
+    flex: 50%;
+    font-size: 1.5em;
+}
+
+.allRules:nth-child(1) {
+    margin-right: 8px;
+}
+
+.allRules:nth-child(2) {
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.allRules:nth-child(2) div {
+    flex: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.allRules div {
+    border: 3px solid #8B8B8B;
+    padding: 5px 25px 5px 25px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+#bottomButton {
+    width: 100%;
+    margin: 20px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stepsRules button {
+    width: 200px;
+    height: 50px;
+    background-color: #00A651;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+}
+
+#footer {
+    height: 100px;
+    background-color: #CFC8AE;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    position: absolute;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#forForm {
+    margin: 0;
+    padding: 85px 30px 30px 30px;
+    display: none;
+    min-height: 100%;
+}
+
+form {
+    font-size: 1.5em;
+}
+
+#wholeForm {
+    display: flex;
+}
+
+#stuDetail {
+    flex: 50%;
+}
+
+#payDetail {
+    flex: 50%;
+}
+textarea{
+    width: 500px;
+    height: 500px;
+    margin: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    padding-left: 10px;
+}
+.inputForm {
+    width: 200px;
+    height: 40px;
+    margin: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    padding-left: 10px;
+}
+.longInput {
+    width: 400px;
+}
+
+.boxPay {
+    background-color: white;
+    margin-bottom: 16px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.boxPay input {
+    margin: 0 25px;
+}
+
+.boxPay input[type='radio'] {
+    transform: scale(2);
+} /*ref:[https://stackoverflow.com/a/33123102] */
+
+.boxPay img {
+    height: 40px;
+}
+
+.boxPay label {
+    width: 100%;
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#amount {
+    height: 90px;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 1.3em;
+    margin-bottom: 16px;
+}
+
+.paymentType {
+    padding-right: 60px;
+}
+
+#agree {
+    margin-bottom: 16px;
+}
+
+#agree input[type='checkbox'] {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#agree label {
+    color: #8B8B8B;
+}
+
+#buttonForm a button {
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    height: 50px;
+    width: 150px;
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+#submitForm {
+    background-color: #00A651;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.3rem;
+    height: 50px;
+    width: 150px;
+    letter-spacing: 1px;
+}
+
+
+
+
+#payment {
+    margin: 0;
+    padding: 100px 30px 30px 30px;
+    height: 100%;
+}
+
+#wholePayment form {
+    display: flex;
+}
+
+#firstPay {
+    flex: 50%;
+}
+
+#secPay {
+    flex: 50%;
+}
+
+#secPay div {
+    padding-right: 60px;
+}
+
+.require {
+    color: red;
+}
+
+.fPay {
+    margin-bottom: 60px;
+}
+
+.fPay input {
+    margin-left: 0;
+}
+
+.shortInput {
+    width: 100px !important;
+}
+
+.userDetails {
+    font-size: 1.1em;
+}
+
+#lastPay {
+    background-color: white;
+    border-radius: 5px;
+    height: 100px;
+    padding-left: 20px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+#cancelButton {
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    height: 50px;
+    width: 150px;
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
