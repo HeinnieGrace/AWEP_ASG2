@@ -7,14 +7,6 @@
     <title>Online Payment</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
-    <style>
-        #theReceipt {
-            display: none;
-        }
-        #wholePayment {
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <head>
@@ -38,67 +30,62 @@
             </div>
         </div>
     <head>
-    <div id="payment">
-        <?php 
-            if(isset($_POST['submit'])) {
+    <?php
+        if(isset($_POST['submit'])) {
 
-                //get user detsils
-                if(isset($_POST['fname']) && isset($_POST['stuID']) ) {
-                    $fullname = $_POST['fname'];
-                    $studentID = $_POST['stuID'];
-                } else {
-                    $fullname = "null";
-                    $studentID = "null";
-                }
-
-                //find payment method
-                if(isset($_POST['method'])) {
-
-                    $payMethod = $_POST['method']; //Cash or Online
-
-                    if($payMethod=="Cash") {
-
-                        //alert
-                        echo '<script type="text/javascript">'; 
-                        echo 'alert("You have successfully book a locker!\nThe next page is your receipt. Please download the receipt and bring it together with your $20 deposit to retrieve your locker key. ");';
-                        echo '</script>';
-
-                        //if cash payment, display receipt
-                        echo "<script> blockCash(); </script>";
-
-                        //cash message
-                        $receiptMsg = "Please download this receipt and bring it together with your $20 deposit to the librarian in order to retrieve your locker key.";
-
-                    } else if ($payMethod=="Online") {
-
-                        //if online payment, display payment
-                        echo "<script> blockPayment(); </script>";
-
-                        //online message
-                        $receiptMsg = "Please download this receipt and bring it to the librarian to retrieve your locker key.";
-                    }
-                }
-
-                //one random letter
-                //ref:[https://stackoverflow.com/a/31441519]
-                $ranL = chr(rand(65,90));
-
-                //random number for receipt
-                $ranN = rand(10000, 99999);
-
-                //random item from array
-                // echo $items[array_rand($items)];
-                //ref:[https://stackoverflow.com/a/4233416]
-                $location = array("Library","Level 4","Level 5","Level 6","Level 7","Level 8","Level 9");
-
-                //for receipt
-                $receiptID = $ranL.$ranL.$ranL.$ranN;
-                $lockerID = rand(1, 30); //total no. of locker is 50
-                $lockerLocation = $location[array_rand($location)];
+            //get user detsils
+            if(isset($_POST['fname']) && isset($_POST['stuID']) ) {
+                $fullname = $_POST['fname'];
+                $studentID = $_POST['stuID'];
+            } else {
+                $fullname = "null";
+                $studentID = "null";
             }
-        ?>
 
-        <div id="theReceipt">
+            //find payment method
+            if(isset($_POST['method'])) {
+
+                $payMethod = $_POST['method']; //Cash or Online
+
+                if($payMethod=="Cash") {
+
+                    //alert
+                    echo '<script type="text/javascript">'; 
+                    echo 'alert("You have successfully book a locker!\nThe next page is your receipt. Please download the receipt and bring it together with your $20 deposit to retrieve your locker key. ");';
+                    echo '</script>';
+
+                    //cash message
+                    $receiptMsg = "Please download this receipt and bring it together with your $20 deposit to the librarian in order to retrieve your locker key.";
+
+                } else if ($payMethod=="Online") {
+
+                    //online message
+                    $receiptMsg = "Please download this receipt and bring it to the librarian to retrieve your locker key.";
+                }
+            }
+
+            //one random letter
+            //ref:[https://stackoverflow.com/a/31441519]
+            $ranL1 = chr(rand(65,90)); //1
+            $ranL2 = chr(rand(65,90)); //2
+            $ranL3 = chr(rand(65,90)); //3
+
+            //random number for receipt
+            $ranN = rand(10000, 99999);
+
+            //random item from array
+            // echo $items[array_rand($items)];
+            //ref:[https://stackoverflow.com/a/4233416]
+            $location = array("Library","Level 4","Level 5","Level 6","Level 7","Level 8","Level 9");
+
+            //for receipt
+            $receiptID = $ranL1.$ranL2.$ranL3.$ranN;
+            $lockerID = rand(1, 30); //total no. of locker is 50
+            $lockerLocation = $location[array_rand($location)];
+        }
+    ?>
+    <div id="payment">
+    <div id="theReceipt">
             <div class="titleForm">
                 <h1>Library Locker Management - Receipt</h1>
             </div>
@@ -130,11 +117,12 @@
             </div>
         </div>
         
+        
         <div id="wholePayment">
             <div class="titleForm">
                 <h1>Library Locker Management - Online Payment</h1>
             </div>
-            <form method="post" action="index.php" required="on">
+            <form required="on">
             <div id="firstPay">
                 <div class="fPay">
                     <h2 class="upText greyText">STUDENT DETAILS</h2>
@@ -164,12 +152,45 @@
                     </div>
                     <div id="buttonForm">
                         <a href="index.php"><input id="cancelButton" type="button" value="Cancel"></a>
-                        <input id="submitForm" type="button" name="submitPay" value="Pay Now" onclick="blockCash()">
+                        <input id="submitForm" type="button" name="submitPay" value="Pay Now" onclick="blockCashJS()">
                     </div>
                 </div>
             </div>
             </form>
         </div> <!--end of online payment-->
+        <?php 
+                //when payment method is online
+                function blockPayment() {
+                    echo "<script>document.getElementById(\"theReceipt\").style.display = \"none\";</script>";
+                    echo "<script>document.getElementById(\"wholePayment\").style.display = \"block\";</script>";
+                    echo "<script>console.log(\"Online\");";  
+                }
+
+                //when payment method is cash OR go to receipt after paying
+                function blockCash() {
+                    echo "<script>document.getElementById(\"theReceipt\").style.display = \"block\";</script>";
+                    echo "<script>document.getElementById(\"wholePayment\").style.display = \"none\";</script>";
+                    echo "<script>console.log(\"Cash/Receipt\");";  
+                }
+
+            //find payment method
+            if(isset($_POST['method'])) {
+
+                $payMethod = $_POST['method']; //Cash or Online
+
+                if($payMethod=="Cash") {
+
+                    //if cash payment, display receipt
+                    blockCash();
+
+                } else if ($payMethod=="Online") {
+
+                    //if online payment, display payment
+                    blockPayment();
+
+                }
+            }
+        ?>
 
     </div>
     
