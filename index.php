@@ -7,11 +7,6 @@
     <title>index</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
-    <!-- <style>
-        iframe {
-            display: none;
-        }
-    </style> -->
 </head>
 <body>
     <head>
@@ -167,7 +162,6 @@
         </div>
         </form>
     </div>
-    <!-- <iframe name="frame"></iframe> -->
     <footer>
         <div id="footer">
             <p>© 2022 - AWEP21S2-GP2 - All Rights Reserved.</p>
