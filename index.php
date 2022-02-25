@@ -7,11 +7,6 @@
     <title>index</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
-    <!-- <style>
-        iframe {
-            display: none;
-        }
-    </style> -->
 </head>
 <body>
     <head>
