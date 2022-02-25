@@ -137,28 +137,6 @@
                     </tr>
                 </table>
             </div>
-
-            <!-- <div id="payDetail">
-                <h2 class="upText greyText">PAYMENT METHODS</h2>
-                <div class="paymentType">
-                    <div class="boxPay">
-                        <input type="radio" id="online" name="method" value="Online" required><img src="assets/card.png"><label for="online">Online Payment</label>
-                    </div>
-                    <div class="boxPay">
-                        <input type="radio" id="cash" name="method" value="Cash" required><img src="assets/cash.png"><label for="cash">Cash</label>
-                    </div>
-                    <div id="amount">
-                        <label>Payment amount: <b>$20</b></label>
-                    </div>
-                    <div id="agree">
-                        <input type="checkbox" id="condition" required><label for="condition" required>All the given details are correct. I also agree with the terms and conditions applied</label>
-                    </div>
-                    <div id="buttonForm">
-                        <a href="#"><button onclick="backToHome()">Cancel</button></a>
-                        <input id="submitForm" type="submit" name="submit" value="Submit">
-                    </div>
-                </div>
-            </div> -->
         </div>
         </form>
     </div>
