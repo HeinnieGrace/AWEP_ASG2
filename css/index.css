@@ -453,8 +453,26 @@ form {
 #wholePayment {
     display: none;
 }
+#addressImg{
+    width: 20px;
+    height: 20px;
+}
+#addressTxt{
+   font-size: 30px;
+   text-align: justify; 
+}
 
-.enquires tr td textarea {
-    width: 250px !important;
-    height: 100px !important;
+.address1{
+    flex: 50%;
+      
+}
+.address2 {
+    flex: 50%;
+    
+}
+#mainContact {
+    margin: 0;
+    padding: 85px 30px 30px 30px;
+    display: flex;
+    flex-direction: row;
 }

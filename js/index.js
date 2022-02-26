@@ -23,8 +23,6 @@ function blockCashJS() {
     document.getElementById("wholePayment").style.display = "none";
     console.log("Cash/Receipt");  
 }
-
-
 //clear the contact us fields
 function clearFields() {
     document.getElementById("fullname").value=""
@@ -32,53 +30,8 @@ function clearFields() {
     document.getElementById("email").value=""
     document.getElementById("description").value=""
 }
-//validate contact us
-var submitForm = document.getElementById("submitform");
-	
-	submitForm.addEventListener("click", function(){
-		checkfield();
-	});
-
-	var fullname = document.getElementById("fullname");
-	var phone = document.getElementById("phone");
-    var email = document.getElementById("email");
-    var description = document.getElementById("description");
-
-	fullname.addEventListener("keyup", function(){
-		checkInput(this.value,0);
-	});
-	phone.addEventListener("keyup", function(){
-		checkInput(this.value,1);
-	});
-    email.addEventListener("keyup", function(){
-		checkInput(this.value,2);
-	});
-    description.addEventListener("keyup", function(){
-		checkInput(this.value,3);
-	});
-
-
-function checkfield(){
-
-		var userinput = document.getElementsByTagfullname("input");
-		var error = document.getElementsByTagfullname("span");
-		var output = document.getElementById("output");
-
-		output.innerHTML="";
-
-		for (var i = 0; i < userinput.length; i++){
-			if(!userinput[i].value){
-				error[i].style.visibility="visible";
-			}
-			else{
-				error[i].style.visibility="hidden";
-			}
-
-			output.innerHTML = output.innerHTML + (userinput[i].value? userinput[i].value + "<br>": "");
-		}
-}
-
-function submitIt() {
-	alert("Successful submission!\nThank you for contacting us. We will respond to you soon.");
-
+//when submit on ContactUs
+function submitContact() {
+	alert("Thank you for contacting us. We will respond to you soon.");
+    clearFields();
 }
