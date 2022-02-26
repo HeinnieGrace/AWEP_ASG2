@@ -37,7 +37,7 @@
             <h1 style="color:#8888">DO YOU HAVE ANY ENQUIRES?</h1>
             <table class="enquires">
                 <tr>
-                    <td><label for="fullname">fullname:<span class="require">*</span></label></td>
+                    <td><label for="fullname">Fullname:<span class="require">*</span></label></td>
                     <td><input type="text" id="fullname" class="inputForm" name="fullname" placeholder="Enter your name"><span class='msg' id='name-error'></span></td>
                 </tr>
                 <tr>
