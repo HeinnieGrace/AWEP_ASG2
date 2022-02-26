@@ -445,3 +445,25 @@ form {
 #wholePayment {
     display: none;
 }
+#addressImg{
+    width: 20px;
+    height: 20px;
+}
+#addressTxt{
+   text-align: justify; 
+}
+
+.address1{
+    display: inline-block;
+    float: left;
+    width:50%;
+    height:50%;
+      
+}
+.address2 {
+    display: inline-block;
+    float: right;
+    width:50%;
+    height:50%;
+    
+}
