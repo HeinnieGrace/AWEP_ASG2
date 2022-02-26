@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Payment</title>
     <link rel="stylesheet" href="css/index.css">
-    <!-- <script src="js/index.js"></script> -->
-    <style>
-        iframe {
-            display: none;
-        }
-    </style>
+    <script src="js/index.js"></script>
 </head>
 <body>
     <head>
@@ -36,23 +31,68 @@
         </div>
     <head>
     <div id="payment">
+        <?php 
+            if(isset($_POST['submit'])) {
+
+                if(isset($_POST['fname']) && isset($_POST['email']) && isset($_POST['stuID']) ) {
+                    $fullname = $_POST['fname'];
+                    $theEmail = $_POST['email'];
+                    $studentID = $_POST['stuID'];
+                } else {
+                    $fullname = "null";
+                    $theEmail = "null";
+                    $studentID = "null";
+                }
+
+                //one random letter
+                //ref:[https://stackoverflow.com/a/31441519]
+                $ranL = chr(rand(65,90));
+
+                //random number for receipt
+                $ranN = rand(10000, 99999);
+
+                //for receipt email
+                $subject = "Library Locker Management";
+                $receiptID = $ranL.$ranL.$ranL.$ranN;
+                $lockerID = rand(1, 30); //total no. of locker is 50
+                $location = "Library";
+                //---payment method here---
+                $cashMsg = "Please show this receipt and pay the $20 deposit to the librarian before retrieving your locker key.";
+                $onlineMsg = "Please show this recipe to the librarian before retrieving your locker key.";
+                $thanks = "Thank you for using our service.";
+                //ref:[https://www.w3schools.com/php/func_mail_mail.asp]
+
+                if(isset($_POST['method'])) {
+
+                    $payMethod = $_POST['method'];
+
+                    if($payMethod=="Cash") {
+
+                        //all message for cash
+                        $forCashReceipt = $receiptID."\n".$lockerID."\n".$location."\n".$payMethod."\n".$cashMsg."\n".$thanks;
+                        $forCashReceipt = wordwrap($forCashReceipt,70); //warp the words when more than 70 chars
+
+                        //send email
+                        mail($theEmail,$subject,$forCashReceipt);
+
+                        echo '<script type="text/javascript">'; 
+                        echo 'alert("You have successfully book a locker!\nAn email containing your receipt and locker ID has been sent to your inbox. Please show that receipt and pay the cash deposit to the librarian in order to retrieve your locker key.");';
+                        echo 'window.location.href = "index.php";';
+                        echo '</script>';
+                        //ref:[https://stackoverflow.com/a/55648833]
+                    }
+                }
+            }
+        ?>
+
         <div class="titleForm">
             <h1>Library Locker Management - Online Payment</h1>
         </div>
         <div id="wholePayment">
-        <form method="post" action="" required="on" target="frame">
+        <form method="post" action="index.php" required="on">
             <div id="firstPay">
                 <div class="fPay">
                     <h2 class="upText greyText">STUDENT DETAILS</h2>
-                    <?php 
-                        if(isset($_POST['fname']) && isset($_POST['email'])) {
-                            $fullname = $_POST['fname'];
-                            $theEmail = $_POST['email'];
-                        } else {
-                            $fullname = "null";
-                            $theEmail = "null";
-                        }
-                    ?>
                     <p class="userDetails">Full Name: <b><?php echo $fullname; ?></b></p>
                     <p class="userDetails">Email: <b><?php echo $theEmail; ?></b></p>
                 </div>
@@ -79,14 +119,14 @@
                     </div>
                     <div id="buttonForm">
                         <a href="index.php"><input id="cancelButton" type="button" value="Cancel"></a>
-                        <input id="submitForm" type="submit" name="submit" value="Pay Now">
+                        <input id="submitForm" type="submit" name="submitPay" value="Pay Now"">
                     </div>
                 </div>
             </div>
         </form>
         
         </div>
-        <iframe name="frame"></iframe><!-- ref:[https://stackoverflow.com/a/10382461] -->
+        <!-- <iframe name="frame"></iframe>ref:[https://stackoverflow.com/a/10382461] -->
     </div>
     
     <footer>
