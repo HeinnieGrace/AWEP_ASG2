@@ -52,7 +52,7 @@
                 </tr>
                 <tr>
                     <td><label for='description'>Description</label><span class="require">*</span></td>
-                    <td><textarea rows="4" cols="50" id='description' class="inputForm" name='description' required></textarea></td>
+                    <td><textarea rows="4" cols="50" id='description' name='description' required></textarea></td>
                 </tr>
             </table>
             <?php

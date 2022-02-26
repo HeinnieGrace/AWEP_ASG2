@@ -17,11 +17,12 @@ function backToHome() {
 }
 
 //when payment method is cash OR go to receipt after paying
+
 function blockCashJS() {
-    alert("You have successfully book a locker!\nThe next page is your receipt. Please download the receipt and bring it together with your $10 deposit to retrieve your locker key. ");
+    alert("You have successfully book a locker!\nThe next page is your receipt. Please download the receipt and bring it to the librarian to retrieve your locker key. ");
     document.getElementById("theReceipt").style.display = "block";
     document.getElementById("wholePayment").style.display = "none";
-    console.log("Cash/Receipt");  
+    console.log("Cash/Receipt"); 
 }
 //clear the contact us fields
 function clearFields() {
@@ -35,3 +36,16 @@ function submitContact() {
 	alert("Thank you for contacting us. We will respond to you soon.");
     clearFields();
 }
+
+//download html to pdf
+function dlReceipt() {
+    var userReceipt = this.document.getElementById("userReceipt");
+    var theA4 = {
+        margin: 0.2,
+        filename: 'Locker_Booking_Receipt.pdf',
+        image: {type: 'png', quality: 1},
+        html2canvas: {scale: 2},
+        jsPDF: {unit: 'in', format: 'a4', orientation: 'p'}
+    };
+    html2pdf().from(userReceipt).set(theA4).save();
+};

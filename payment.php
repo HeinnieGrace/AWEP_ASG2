@@ -7,6 +7,7 @@
     <title>Online Payment</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <head>
@@ -22,10 +23,10 @@
                     <a href="index.php#toRules"><button onclick="backToHome()">Rules</button></a>
                 </div>
                 <div class="menuButton">
-                    <a href="#"><button>About Us</button></a>
+                    <a href="aboutus.php"><button>About Us</button></a>
                 </div>
                 <div class="menuButton">
-                    <a href="#"><button>Contact Us</button></a>
+                    <a href="contactus.php"><button>Contact Us</button></a>
                 </div>
             </div>
         </div>
@@ -111,8 +112,8 @@
                         <p class="userReceiptD">This receipt will not be generated again. Please store this receipt well for booking evidence.</p>
                     </div>
                     <div id="dlButtons">
-                        <input id="download" type="button" name="download" value="Download" onclick="">
-                        <a href="index.php"><input id="cancelButton" type="button" value="Cancel"></a>
+                        <button id="download" onclick="dlReceipt()">Download</button>
+                        <a href="index.php"><input id="cancelButton" type="button" value="Home"></a>
                     </div>
                 </div>
             </div>
