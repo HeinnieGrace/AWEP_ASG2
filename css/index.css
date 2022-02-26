@@ -373,8 +373,16 @@ form {
     letter-spacing: 1px;
 }
 
-
-
+#submitform {
+    background-color: #00A651;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.3rem;
+    height: 50px;
+    width: 150px;
+    letter-spacing: 1px;
+}
 
 #payment {
     margin: 0;
@@ -442,6 +450,12 @@ form {
 #theReceipt {
     display: none;
 }
+
 #wholePayment {
     display: none;
+}
+
+.enquires tr td textarea {
+    width: 250px !important;
+    height: 100px !important;
 }

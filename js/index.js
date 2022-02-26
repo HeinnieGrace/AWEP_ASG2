@@ -29,20 +29,18 @@ function blockCashJS() {
 function clearFields() {
     document.getElementById("fullname").value=""
     document.getElementById("phone").value=""
-    document.getElementById("phone").value=""
+    document.getElementById("email").value=""
     document.getElementById("description").value=""
 }
 //validate contact us
 var submitForm = document.getElementById("submitform");
 	
 	submitForm.addEventListener("click", function(){
-
 		checkfield();
 	});
 
 	var fullname = document.getElementById("fullname");
 	var phone = document.getElementById("phone");
-	var fullname= document.getElementById("fullname");
     var email = document.getElementById("email");
     var description = document.getElementById("description");
 
@@ -52,14 +50,11 @@ var submitForm = document.getElementById("submitform");
 	phone.addEventListener("keyup", function(){
 		checkInput(this.value,1);
 	});
-	fullname.addEventListener("keyup", function(){
+    email.addEventListener("keyup", function(){
 		checkInput(this.value,2);
 	});
-    email.addEventListener("keyup", function(){
-		checkInput(this.value,3);
-	});
     description.addEventListener("keyup", function(){
-		checkInput(this.value,4);
+		checkInput(this.value,3);
 	});
 
 
@@ -81,4 +76,9 @@ function checkfield(){
 
 			output.innerHTML = output.innerHTML + (userinput[i].value? userinput[i].value + "<br>": "");
 		}
+}
+
+function submitIt() {
+	alert("Successful submission!\nThank you for contacting us. We will respond to you soon.");
+
 }
