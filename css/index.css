@@ -426,6 +426,29 @@ form {
     font-size: 1.1em;
 }
 
+#importantReceipt {
+    border: 2px solid #8B8B8B;
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-bottom: 16px;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.userReceiptD {
+    font-size: 1.2rem;
+}
+
+#userReceipt {
+    background-color: white;
+    margin-right: 40px;
+    padding: 20px 40px; 
+    border: 1px solid #8B8B8B;
+    border-radius: 5px;
+}
+
 #lastPay {
     background-color: white;
     border-radius: 5px;
@@ -450,13 +473,35 @@ form {
 #theReceipt {
     display: none;
 }
+
+#divide {
+    display: flex;
+}
+
+#userReceipt, #downloadButton {
+    flex: 50%;
+}
+
 #wholePayment {
     display: none;
 }
+
+#download {
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: #00A651;
+    height: 50px;
+    width: 150px;
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
 #addressImg{
     width: 30px;
     height: 30px;
 }
+
 #addressTxt{
    font-size: 30px;
    text-align: justify; 
