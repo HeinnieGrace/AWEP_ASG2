@@ -476,3 +476,9 @@ form {
     display: flex;
     flex-direction: row;
 }
+
+#aboutUs {
+    padding: 85px 30px 30px 30px;
+    margin: 0;
+    height: 100%;
+}
