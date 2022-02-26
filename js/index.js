@@ -23,7 +23,13 @@ function blockCashJS() {
     document.getElementById("wholePayment").style.display = "none";
     console.log("Cash/Receipt");  
 }
-
+//clear the contact us fields
+function clearFields() {
+    document.getElementById("fullname").value=""
+    document.getElementById("phone").value=""
+    document.getElementById("email").value=""
+    document.getElementById("description").value=""
+}
 //when submit on ContactUs
 function submitContact() {
 	alert("Thank you for contacting us. A copy of your submission has been send to your email. We will respond to you soon.");
