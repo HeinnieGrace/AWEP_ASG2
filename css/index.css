@@ -450,6 +450,7 @@ form {
     height: 20px;
 }
 #addressTxt{
+   font-size: 30px;
    text-align: justify; 
 }
 
