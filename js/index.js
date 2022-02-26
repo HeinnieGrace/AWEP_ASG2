@@ -32,7 +32,6 @@ function clearFields() {
 }
 //when submit on ContactUs
 function submitContact() {
-	alert("Thank you for contacting us. A copy of your submission has been send to your email. We will respond to you soon.");
-        document.getElementById("main").style.display = "none";
-        document.getElementById("output").style.display = "block";
+	alert("Thank you for contacting us. We will respond to you soon.");
+    clearFields();
 }
