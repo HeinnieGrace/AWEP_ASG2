@@ -51,8 +51,8 @@
                     <?php
 
                         // decrement and increment not working properly: JS cannot work is have this php functions
-
-
+                    
+                        //ref:[https://stackoverflow.com/a/25306218]
                         // if (!isset($_SESSION)){
                         //     session_start();
                         // }
