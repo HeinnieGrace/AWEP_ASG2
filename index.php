@@ -41,29 +41,51 @@
                     <div id="littleSlogan">
                         <p>Why bring a lot of stuff everyday when you can keep it at school.</p>
                     </div>
-                    <button onclick="bookALocker()">Book a Locker</button>
+                    <form method="post">
+                        <!-- <input type="hidden" name="countPlus" value="<?php echo $_SESSION['countPlus']; ?>" /> 
+                        <input type="hidden" name="countMinus" value="<?php echo $_SESSION['countMinus']; ?>" />  -->
+                        <input type="button" name="plusOne" id="bookNow" onclick="bookALocker()" value="Book a Locker">
+                    </form>
                 </div>
                 <div id="locker">
+                    <?php
+
+                        // decrement and increment not working properly: JS cannot work is have this php functions
+
+
+                        // if (!isset($_SESSION)){
+                        //     session_start();
+                        // }
+                        // if counter is not set, set to zero
+                        if(!isset($_SESSION['countPlus'])) {
+                        $_SESSION['countPlus'] = 50;
+                        }
+                        if(!isset($_SESSION['countMinus'])) {
+                            $_SESSION['countMinus'] = 0;
+                        }
+                    ?>
                     <div id="outside">
                         <div class="inside lock">
                             <img src="assets/unlock.png">
                             <?php
-                                $_POST['submitForm'] = 50;
-                                if(isset($_POST['submitForm'])) {
-                                    $_POST['submitForm']--;
+                                // if button is pressed, decrement counter
+                                if(isset($_POST['plusOne'])) {
+                                    $_SESSION['countPlus']--;
                                 }
-                                echo "<p> " . $_POST['submitForm'];
                             ?>
+                            <!-- <p><?php echo $_SESSION['countPlus']; ?></p> -->
+                            <p>30</p>
                         </div>
                         <div class="inside lock">
                             <img src="assets/locked.png">
                             <?php
-                                if(!isset($_POST['submitForm'])) {
-                                    $_POST['submitForm']++;
-
-                                    echo "<p> " . $_POST['submitForm'];
+                                // if button is pressed, increment counter
+                                if(isset($_POST['plusOne'])) {
+                                    $_SESSION['countMinus']++;
                                 }
                             ?>
+                            <!-- <p><?php echo $_SESSION['countMinus']; ?></p> -->
+                            <p>20</p>
                         </div>
                         <div class="inside line">
                             <img src="assets/lines.png">
@@ -110,7 +132,11 @@
                     </div>
                 </div>
                 <div id="bottomButton">
-                    <button onclick="bookALocker()">Book a Locker</button>
+                    <form method="post">
+                        <!-- <input type="hidden" name="countPlus" value="<?php echo $_SESSION['countPlus']; ?>" />
+                        <input type="hidden" name="countMinus" value="<?php echo $_SESSION['countMinus']; ?>" />  -->
+                        <input type="button" name="plusOne" id="bookNow" onclick="bookALocker()" value="Book a Locker">
+                    </form>
                 </div>
             </div>
     

@@ -288,6 +288,16 @@ form {
     padding-left: 10px;
 }
 
+#description {
+    width: 400px;
+    height: 100px;
+    margin: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    padding-left: 10px;
+}
+
 .longInput {
     width: 400px;
 }
@@ -494,6 +504,17 @@ form {
     height: 50px;
     width: 150px;
     font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+#bookNow {
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: #00A651;
+    height: 50px;
+    width: 150px;
+    font-size: 1.2rem;
     margin-right: 10px;
 }
 
