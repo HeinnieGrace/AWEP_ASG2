@@ -32,25 +32,26 @@
             </div>
         </div>
     <head>
-        <div id="main"> 
-    <form method="POST" action="">
+    <div id="main" >
+    <div class = "address1">
+    <form required ="on">
     <h1 style="color:#8888">DO YOU HAVE ANY ENQUIRES?</h1>
     <table class="enquires">
         <tr>
-            <td><label for="fullname">fullname:<span class="require">*</span></label></td>
-            <td><input type="text" id="fullname" class="inputForm" name="fullname" placeholder="Enter your name"><span class='msg' id='name-error' required></span></td>
+            <td><label for="fullname">Fullname:<span class="require">*</span></label></td>
+            <td><input type="text" id="fullname" class="inputForm" name="fullname" placeholder="Enter your name" required></td>
         </tr>
         <tr>
             <td><label for="phone">Phone Number:<span class="require">*</span></label></td>
-            <td><input type="tel" id="phone" class="inputForm" name="phone" pattern="(2|3|4|5|7|8){1}[0-9]{6}" maxlength='7' placeholder="Eg: 8888888"><span class='msg' id='phone-error' required></span></td>
+            <td><input type="tel" id="phone" class="inputForm" name="phone" pattern="(2|3|4|5|7|8){1}[0-9]{6}" maxlength='7' placeholder="Eg: 8888888" required></td>
         </tr>
         <tr>
             <td><label for="email">Email:<span class="require">*</span></label></td>
-            <td><input type="email" id="email" class="inputForm" name="email" placeholder="Enter your Email"><span class='msg' id='email-error' required></span></td>
+            <td><input type="email" id="email" class="inputForm" name="email" placeholder="Enter your Email" required></td>
         </tr>
         <tr>
             <td><label for='description'>Description</label><span class="require">*</span></td>
-            <td><textarea rows="4" cols="50" id='description' class="inputForm" name='description'></textarea><span class='msg' id='description-error' required></span></td>
+            <td><textarea rows="4" cols="50" id='description' class="inputForm" name='description' required></textarea></td>
         </tr>
     </table>
     <?php
@@ -65,13 +66,41 @@
     ?>
     <div id="buttonForm">
         <input id="cancelButton" type="button" onclick="clearFields()" value="Clear">
-        <input id="submitFormContact" type="button" onclick="submitContact()" value="Submit"><span class='msg' id='submit-error'></span>
+        <input id="submitForm" type="button" onclick="submitContact()" value="Submit">
     </div>
     <div id="output"></div>
     </form>
     </div>
-    <div>
-        
+    </div>
+    <div class="address2">
+        <h1>Contact Us</h1>
+        <p>
+        <img id="addressImg" src="assets/location.png">
+            <span id="addressTxt"> Library and Learning Centre
+                    <br />
+                    Politeknik Brunei
+                    <br />
+                    Block 2 Level 3
+                    <br />
+                    Ong Sum Ping Condominium
+                    <br />
+                    Jalan Ong Sum Ping
+                    <br />
+                    Bandar Seri Begawan BA1311
+                    <br />
+                    Brunei Darussalam
+            </span>
+            </p>
+            <p>
+            <img id="addressImg" src="assets/phone-call.png">
+                <span id="addressTxt"> +6732234466 ext 210 & 306</span>
+            </p>
+            <p>
+            <img id="addressImg" src="assets/mail.png">
+                <span id="addressTxt">library@pb.edu.bn</span>
+            </p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
