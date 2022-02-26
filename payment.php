@@ -85,34 +85,35 @@
         }
     ?>
     <div id="payment">
-    <div id="theReceipt">
+        <div id="theReceipt">
             <div class="titleForm">
                 <h1>Library Locker Management - Receipt</h1>
             </div>
-
-            <div id="userReceipt">
-                <p class="userDetails"><b>LOCKER BOOKING RECEIPT</b></p>
-                <br>
-                <p class="userDetails">Full Name: <b><?php echo $fullname; ?></b></p>
-                <p class="userDetails">Student ID: <b style="text-transform:uppercase"><?php echo $studentID; ?></b></p>
-                <br>
-                <p class="userDetails">Receipt ID: <b><?php echo $receiptID; ?></b></p>
-                <p class="userDetails">Locker ID: <b><?php echo $lockerID; ?></b></p>
-                <p class="userDetails">Locker Location: <b><?php echo $lockerLocation; ?></b></p>
-                <p class="userDetails">Payment Method: <b><?php echo $payMethod; ?></b></p>
-                <br>
-                <p class="userDetails"><?php echo $receiptMsg; ?></p>
-                <p class="userDetails">Thank you for using our service.</p>
-                <br><br><br>
-                <p class="userDetails">(2022) AWEP21S2-GP2 - Locker Management</p>
-            </div>
-            <div id="downloadButton">
-                <div id="importantReceipt">
-                    <p>This receipt will not be generated again. Please store this receipt well for booking evidence.</p>
+            <div id="divide">
+                <div id="userReceipt">
+                    <p class="userReceiptD"><b>LOCKER BOOKING RECEIPT</b></p>
+                    <br>
+                    <p class="userReceiptD">Full Name: <b><?php echo $fullname; ?></b></p>
+                    <p class="userReceiptD">Student ID: <b style="text-transform:uppercase"><?php echo $studentID; ?></b></p>
+                    <br>
+                    <p class="userReceiptD">Receipt ID: <b><?php echo $receiptID; ?></b></p>
+                    <p class="userReceiptD">Locker ID: <b><?php echo $lockerID; ?></b></p>
+                    <p class="userReceiptD">Locker Location: <b><?php echo $lockerLocation; ?></b></p>
+                    <p class="userReceiptD">Payment Method: <b><?php echo $payMethod; ?></b></p>
+                    <br>
+                    <p class="userReceiptD"><?php echo $receiptMsg; ?></p>
+                    <p class="userReceiptD">Thank you for using our service.</p>
+                    <br><br>
+                    <p class="userReceiptD">(2022) AWEP21S2-GP2 - Library Locker Management</p>
                 </div>
-                <div id="dlButtons">
-                    <input id="download" type="button" name="download" value="Download" onclick="">
-                    <a href="index.php"><input id="cancelButton" type="button" value="Cancel"></a>
+                <div id="downloadButton">
+                    <div id="importantReceipt">
+                        <p class="userReceiptD">This receipt will not be generated again. Please store this receipt well for booking evidence.</p>
+                    </div>
+                    <div id="dlButtons">
+                        <input id="download" type="button" name="download" value="Download" onclick="">
+                        <a href="index.php"><input id="cancelButton" type="button" value="Cancel"></a>
+                    </div>
                 </div>
             </div>
         </div>
